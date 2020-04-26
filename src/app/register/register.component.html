@@ -1,0 +1,55 @@
+<section class="user-form mt-5 mb-5">
+  <form #formData="ngForm" [formGroup]="form" (ngSubmit)="onSubmit(formData.value)" class="form col-4">
+    <div class="form__item form-field form-group">
+      <input class="form__input form-control" type="text" id="firstName" name="firstName"
+             formControlName="firstName" placeholder="Прізвище, ім'я, по батькові">
+    </div>
+
+    <div class="form__item form-field form-group">
+      <input class="form__input form-control" type="text" id="phoneNumber" name="phoneNumber"
+             formControlName="phoneNumber" placeholder="Телефон">
+    </div>
+
+    <div class="form__item form-field form-group" formArrayName="email">
+      <div *ngFor="let email of email.controls;let i = index">
+        <input class="form__input form-control"  type="text" id="'email' + i" [name]="'email' + i" [formControlName]="i" placeholder="Електронна адреса">
+        <!--        <button class="form__item&#45;&#45;rm" (click)="deleteEmailField($event)" type="button">X</button>-->
+      </div>
+      <!--      <button class="form__item&#45;&#45;add" (click)="addEmailField()" type="button">+</button>-->
+    </div>
+
+    <div class="form__item form-field form-group">
+      <input class="form__input form-control" type="text" id="password" name="password"
+             formControlName="password" placeholder="Пароль">
+    </div>
+
+    <div class="form__item form-field form-group">
+      <input class="form__input form-control" type="text" id="passwordTwo" name="passwordTwo"
+             formControlName="passwordTwo" placeholder="Повторіть пароль">
+    </div>
+
+    <div class="form__item form-field form-group">
+      <input class="form__input form-control" type="text" id="city" name="city"
+             formControlName="city" placeholder="Місто">
+    </div>
+
+    <div class="form__item form-field form-group">
+      <select id="sex" class="form-control">
+        <option value="volvo">Чоловік</option>
+        <option value="saab">Жінка</option>
+      </select>
+    </div>
+
+    <div class="form__item form-field form-group">
+      <input class="form__input form-control" type="date" id="bDay" name="bDay"
+             formControlName="bDay" placeholder="Дата народження">
+    </div>
+
+    <div class="form__item form-field form-group">
+      <input class="form-check-input ml-1" type="checkbox" id="horns" name="horns">
+      <label for="horns" class="form-check-label ml-4">Я даю згоду на обробку персональних даних</label>
+    </div>
+    <button type="reset"  class="btn btn-outline-primary ml-2 mr-4" (click)="formData.reset()">Reset</button>
+    <button type="submit"  class="btn btn-primary">Submit</button>
+  </form>
+</section>

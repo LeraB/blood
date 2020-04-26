@@ -1,0 +1,15 @@
+<div class="product-list-wrap">
+  <ul class="product-list row">
+    <app-donor class="col-3"
+      *ngFor="let donor of favouritesList"
+      [donor]=donor
+      (removeFromList)="removeFromFavorites($event)"
+      [isInFavoriteList]=true
+    ></app-donor>
+    <app-donor class="col-xs-12 col-sm-6 col-md-4 col-lg-3"
+      *ngFor="let donor of donors"
+      [donor]=donor
+      (addToList)="addToFavorites($event)"
+    ></app-donor>
+  </ul>
+</div>

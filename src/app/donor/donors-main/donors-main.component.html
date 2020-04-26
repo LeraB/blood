@@ -1,0 +1,29 @@
+<div class="products-main row">
+  <div class="search col-12 mb-xs-2 mb-md-4">
+    <input
+      type="text"
+      #searchInput
+      (input)="search(searchInput)"
+      class="search__input d-md-inline-block form-control mr-md-2 col-xs-12 col-md-4 col-md-3 mb-3 mb-md-0"
+      placeholder="Пошук по імені"
+    >
+    <select class="search__select d-md-inline-block form-control mr-md-2 col-xs-12 col-md-3 mb-3 mb-md-0" #searchRhesusFactor
+            (change)="search($event.target)">
+      <option value="default"></option>
+      <option value="plus">+</option>
+      <option value="minus">-</option>
+    </select>
+    <select class="search__select d-md-inline-block form-control col-xs-12 col-md-3 mb-3 mb-md-0" #searchType
+            (change)="search($event.target)">
+      <option value="default"></option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </div>
+  <app-donor-list
+    [donors] = filteredDonors
+  >
+  </app-donor-list>
+</div>

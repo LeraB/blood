@@ -1,0 +1,41 @@
+<section class="user-form">
+  <form #formData="ngForm" [formGroup]="form" (ngSubmit)="onSubmit(formData.value)" class="form form-group col-4">
+    <div class="form__item form-field form-group">
+      <input class="form__input form-control" type="text" id="firstName" name="firstName"
+             formControlName="firstName" placeholder="Прізвище, ім'я, по батькові">
+    </div>
+
+    <div class="form__item form-field form-group">
+      <input class="form__input form-control" type="text" id="phoneNumber" name="phoneNumber"
+             formControlName="phoneNumber" placeholder="Телефон">
+    </div>
+
+    <div class="form__item form-field form-group" formArrayName="email">
+      <div *ngFor="let email of email.controls;let i = index">
+        <input class="form__input form-control"  type="text" id="'email' + i" [name]="'email' + i" [formControlName]="i" placeholder="Електронна адреса">
+<!--        <button class="form__item&#45;&#45;rm" (click)="deleteEmailField($event)" type="button">X</button>-->
+      </div>
+<!--      <button class="form__item&#45;&#45;add" (click)="addEmailField()" type="button">+</button>-->
+    </div>
+
+    <div class="form__item form-field form-group">
+      <input class="form__input form-control" type="number" min="1" max="4" id="group" name="group"
+             formControlName="group" placeholder="Група крові">
+    </div>
+
+    <div class="form-group">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioPlus" value="option1">
+      <label class="form-check-label" for="inlineRadioPlus">+</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioMinus" value="option2">
+      <label class="form-check-label" for="inlineRadioMinus">-</label>
+    </div>
+    </div>
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary mr-2" (click)="formData.reset()">Reset</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</section>

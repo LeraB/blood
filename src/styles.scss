@@ -1,1 +1,83 @@
+@import 'variables';
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/variables';
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #e50000;
+  --secondaryry-color: #000000;
+  --btn-text-color: #FFF;
+}
+
+* {
+  font-size: 20px;
+}
+
+.form {
+ margin: 0 auto;
+}
+
+.form__label {
+  display: block;
+}
+
+.form__item--emails {
+  position: relative;
+}
+
+.form__item--emails .form__input {
+  padding-right: 17px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.form__item--rm {
+  position: absolute;
+  top: 9px;
+  right: -15px;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: #F00;
+  cursor: pointer;
+}
+
+.form__item--add {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: $primary;
+  cursor: pointer;
+}
+
+.form__button {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.form__button:hover {
+  background-color: var(--primary-color);
+  color: var(--btn-text-color);
+}
+
+.form__submit {
+  background-color: var(--primary-color);
+  color: var(--btn-text-color);
+}
+
+.form__submit:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.form-result {
+  width: 50%;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

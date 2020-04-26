@@ -1,0 +1,20 @@
+<section class="user-form mt-5 mb-5">
+  <form #formData="ngForm" [formGroup]="form" (ngSubmit)="onSubmit(formData.value)" class="form col-4">
+
+    <div class="form__item form-field form-group">
+      <input class="form__input form-control" type="text" id="phoneNumber" name="phoneNumber"
+             formControlName="phoneNumber" placeholder="Логін">
+    </div>
+
+    <div class="form__item form-field form-group">
+      <input class="form__input form-control" type="text" id="password" name="password"
+             formControlName="password" placeholder="Пароль">
+    </div>
+
+    <a routerLink="/register" type="reset"  class="btn btn-outline-primary ml-2 mr-4">Зареєструватись</a>
+    <button type="submit"  class="btn btn-primary">Увійти</button>
+    <div class="form__forgot-pass">
+    <a href="#">Забули пароль?</a>
+    </div>
+  </form>
+</section>
