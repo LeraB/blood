@@ -1,1 +1,11 @@
-<p>recipient works!</p>
+<li
+  class="recipient-list__item mb-4"
+>
+  <div class="recipient-list__content">
+    <h5 class="recipient-list__name">{{recipient.Name}}</h5>
+    <p>Телефон: {{recipient.Phone}}</p>
+    <p class="recipient-list__description">Група крові: {{recipient.RhesusFactor}}{{recipient.BloodType}}</p>
+    <button class="recipient-list__link btn btn-danger" (click)="respond(); clicked = true;" *ngIf="!clicked; else thenBlock">Відгукнутись</button>
+    <ng-template #thenBlock><p class="recipient-respond">Дякуємо, ми зв'яжемось з вами!</p></ng-template>
+  </div>
+</li>

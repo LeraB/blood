@@ -1,15 +1,9 @@
 <li
-  class="product-list__item mb-4"
+  class="donor-list__item mb-4"
 >
-  <img
-    src="{{donor.img}}"
-    alt="product.Title"
-    class="product-list__img p-3"
-  >
-  <div class="product-list__content">
-    <h5>{{donor.Name}}</h5>
+  <div class="donor-list__content">
+    <h5 class="donor-list__name">{{donor.Name}}</h5>
     <p>Телефон: {{donor.Phone}}</p>
-    <p class="product-list__description">Група крові: {{donor.RhesusFactor}}{{donor.BloodType}}</p>
-    <a href="/{{donor.Id}}" class="product-list__link">Переглянути профіль</a>
-  </div>
+    <p class="donor-list__description">Група крові: {{donor.RhesusFactor}}{{donor.BloodType}}</p>
+    </div>
 </li>

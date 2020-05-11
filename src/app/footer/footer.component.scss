@@ -1,8 +1,30 @@
-
 .navigation__item {
   color: #FFF;
 }
 
 .footer {
-  background: red;
+  background: #F0F0F0!important;
+}
+
+.logo svg {
+  max-width: 100px;
+}
+
+.logo--wrapper {
+width: 100px;
+}
+
+.footer--content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .navigation__item {
+color: #696969;
+  font-size: 16px;
+}
+
+.footer .navigation__item:hover {
+  color: #dc3545;
 }

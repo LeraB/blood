@@ -10,7 +10,15 @@ img {
   margin: 0 auto;
 }
 
- .block-give-blood,
- .block-get-blood {
+.block-give-blood,
+.block-get-blood {
   margin: 0 auto;
+  background-color: #F0F0F0;
+  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero {
+  background: #F0F0F0;
+  z-index: 1;
+  padding-top: 100px;
 }

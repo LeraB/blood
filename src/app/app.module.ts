@@ -11,6 +11,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
@@ -33,7 +34,8 @@ import { MaterializeButtonModule, MaterializeNavbarModule } from 'materialize-an
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     MaterializeButtonModule,
-    MaterializeNavbarModule
+    MaterializeNavbarModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

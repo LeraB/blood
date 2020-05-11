@@ -1,1 +1,15 @@
-<p>recipient-list works!</p>
+<div class="product-list-wrap">
+  <ul class="product-list row">
+    <app-recipient class="col-3"
+               *ngFor="let recipient of favouritesList"
+               [recipient]=recipient
+               (removeFromList)="removeFromFavorites($event)"
+               [isInFavoriteList]=true
+    ></app-recipient>
+    <app-recipient class="col-xs-12 col-sm-6 col-md-4 col-lg-3"
+               *ngFor="let recipient of recipient"
+               [recipient]=recipient
+               (addToList)="addToFavorites($event)"
+    ></app-recipient>
+  </ul>
+</div>

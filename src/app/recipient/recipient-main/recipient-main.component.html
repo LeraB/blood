@@ -1,1 +1,34 @@
-<p>recipient-main works!</p>
+<div class="container pt-5">
+<div class="products-main row">
+  <div class="search col-12 mb-xs-2 mb-md-4">
+    <form [formGroup]="profileForm" (ngSubmit)="search()">
+      <input
+        type="text"
+        #searchInput
+        class="search__input d-md-inline-block form-control mr-md-2 col-xs-12 col-md-4 col-md-3 mb-3 mb-md-0"
+        placeholder="Пошук по імені"
+        formControlName="searchInput"
+      >
+      <select class="search__select d-md-inline-block form-control mr-md-2 col-xs-12 col-md-3 mb-3 mb-md-0" formControlName="searchRhesusFactor" #searchRhesusFactor>
+        <option value="default">- Резус фактор -</option>
+        <option value="plus">+</option>
+        <option value="minus">-</option>
+      </select>
+      <select class="search__select d-md-inline-block form-control col-xs-12 col-md-3 mb-3 mb-md-0" formControlName="searchType" #searchType>
+        <option value="default">- Група крові -</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <button type="submit" class="recipient-list__link btn btn-danger ml-4">Шукати</button>
+    </form>
+  </div>
+  <app-recipient-list
+    [recipient] = filteredRecipient
+
+    style="width: 100%;"
+  >
+  </app-recipient-list>
+</div>
+</div>

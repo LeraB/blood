@@ -15,6 +15,7 @@ export class DonorComponent implements OnInit {
   @Output() addToList = new EventEmitter<Donor>();
   @Output() removeFromList = new EventEmitter<Donor>();
 
+  clicked = false;
   constructor() {
   }
 
@@ -27,6 +28,10 @@ export class DonorComponent implements OnInit {
 
   public removeProductFromList(donor: Donor) {
     this.removeFromList.emit(donor);
+  }
+
+  public respond() {
+    return true;
   }
 
 }

@@ -1,0 +1,35 @@
+.recipient-list__item {
+  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.recipient-list__content {
+  padding: 20px;
+  text-align: center;
+}
+
+.recipient-list__name {
+  font-weight: bold;
+}
+.list-title {
+  text-align: center;
+}
+
+.recipient-list__title {
+  min-height: 80px;
+}
+
+.recipient-list__link {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.recipient-list__description {
+  min-height: 70px;
+}
+
+.recipient-respond {
+  font-size: 15px;
+  color: red;
+  font-style: italic;
+}
